@@ -1,0 +1,173 @@
+export const AppLayout = (props) => {
+  let HeaderComponent;
+  if (props.header) {
+    HeaderComponent = <div style={{ height: "80px" }}>{props.header}</div>;
+  }
+  let FooterComponent;
+  if (props.footer) {
+    FooterComponent = <div style={{ height: "80px" }}>{props.footer}</div>;
+  }
+  let MainComponent;
+  if (props.content) {
+    MainComponent = <div style={{ flex: "1 auto" }}>{props.content}</div>;
+  }
+  return (
+    <div
+      style={{
+        margin: "20px 0",
+        width: "1280px",
+        height: "960px",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <HeaderComponent></HeaderComponent>
+      <MainComponent></MainComponent>
+      <FooterComponent></FooterComponent>
+    </div>
+  );
+};
+
+### 暗色系主题一
+
+export const DarkLayout1 = () => {
+  return (
+    <div
+      style={{
+        width: "100%",
+        overflow: "auto",
+        color: "#fff",
+        lineHeight: "20px",
+      }}
+    >
+      <div style={{ width: "100%", height: 500, display: "flex" }}>
+        <div style={{ width: 250, height: "100%", background: "#363636" }}>
+          <ul>
+            <li>
+              <h5>侧栏</h5>
+              <p>
+                <code style={{ background: "transparent" }}>
+                  background：#363636
+                </code>
+              </p>
+            </li>
+            <li>
+              <h5>菜单</h5>
+              默认：
+              <p>
+                <button
+                  style={{
+                    padding:"10px",
+                    border: "none",
+                    background: "#363636",
+                    color: "#fff",
+                  }}
+                >
+                  background:#363636; color:#fff;
+                </button>
+              </p>
+              鼠标悬浮：
+              <p>
+                <button
+                  style={{
+                    padding:"10px",
+                    border: "none",
+                    background: "#292929",
+                    color: "#fff",
+                  }}
+                >
+                  background:#292929; color:#fff;
+                </button>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div style={{ height: "100%", flex: "1 auto", background: "#212121" }}>
+          <ul>
+            <li>
+              <h5>内容</h5>
+              <p>
+                <code style={{ background: "transparent" }}>
+                  background：#212121
+                </code>
+              </p>
+            </li>
+            <li>
+              <h5>文字</h5>
+              默认：
+              <p>
+                <div style={{ color: "#fff" }}>#fff</div>
+              </p>
+              链接：
+              <p>
+                <div style={{ color: "#03a9f4" }}>#03a9f4</div>
+              </p>
+            </li>
+            <li>
+              <h5>其他</h5>
+              <div>
+                <div
+                  style={{
+                    background: "#5c93ed",
+                    color: "#fff",
+                    width: "100px",
+                  }}
+                >
+                  #5c93ed
+                </div>
+                <div
+                  style={{
+                    background: "#47d35c",
+                    color: "#fff",
+                    width: "100px",
+                  }}
+                >
+                  #47d35c
+                </div>
+                <div
+                  style={{
+                    background: "#94b242",
+                    color: "#fff",
+                    width: "100px",
+                  }}
+                >
+                  #94b242
+                </div>
+                <div
+                  style={{
+                    background: "#f2d624",
+                    color: "#fff",
+                    width: "100px",
+                  }}
+                >
+                  #f2d624
+                </div>
+                <div
+                  style={{ background: "red", color: "#fff", width: "100px" }}
+                >
+                  red
+                </div>
+                <div
+                  style={{
+                    background: "#828282",
+                    color: "#fff",
+                    width: "100px",
+                  }}
+                >
+                  #828282
+                </div>
+                <div
+                  style={{ background: "black", color: "#fff", width: "100px" }}
+                >
+                  black
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+<DarkLayout1></DarkLayout1>
